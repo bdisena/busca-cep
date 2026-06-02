@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Address {
+  id          String   @id @default(uuid())
+  cep         String   @unique
+  logradouro  String
+  bairro      String
+  complemento String?
+  localidade  String
+  uf          String
+  ddd         String?
+  ibge        String?
+  regiao      String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
