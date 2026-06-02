@@ -185,9 +185,12 @@ export default function Home() {
       <header className="bg-white border-b border-zinc-200 py-5 px-6 relative z-10 shadow-sm">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="flex items-baseline font-display text-2xl font-bold tracking-tight">
-              <span className="text-brand-grey">acelera</span>
-              <span className="text-brand-red">cep</span>
+            <div className="flex items-center">
+              <img 
+                src="/logo_acelera.png" 
+                alt="Acelera" 
+                className="h-8 w-auto object-contain"
+              />
             </div>
             <span className="h-6 w-px bg-zinc-200 hidden sm:inline" />
             <p className="text-xs text-brand-grey font-medium tracking-wide uppercase hidden sm:inline">
