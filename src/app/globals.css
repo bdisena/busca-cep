@@ -1,26 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f8fafc;
+  --foreground: #5b6770; /* PMS 431 */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  --font-display: var(--font-display), system-ui, sans-serif;
+  
+  --color-brand-red: #ba0c2f;       /* PMS 200 */
+  --color-brand-navy: #1b2a47;      /* PMS 533 */
+  --color-brand-blue: #567c9c;      /* PMS 5405 */
+  --color-brand-blue-grey: #7f9cb8; /* PMS 5425 */
+  --color-brand-light: #b4c5d6;     /* PMS 5435 */
+  --color-brand-grey: #5b6770;      /* PMS 431 */
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+.brand-pattern {
+  background-color: var(--color-brand-navy);
+  background-image: 
+    linear-gradient(45deg, var(--color-brand-blue) 25%, transparent 25%), 
+    linear-gradient(-45deg, var(--color-brand-blue) 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, var(--color-brand-blue) 75%), 
+    linear-gradient(-45deg, transparent 75%, var(--color-brand-blue) 75%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+  opacity: 0.08;
 }
